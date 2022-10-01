@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.wilman.easysoccer.databinding.FragmentStadiumsBinding
+import com.wilman.easysoccer.ui.header.HeaderViewProfile
 
 class StadiumsFragment : Fragment() {
 
@@ -27,7 +28,7 @@ class StadiumsFragment : Fragment() {
 
         _binding = FragmentStadiumsBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
+        HeaderViewProfile(_binding!!.headerProfile, this).build()
 
         stadiumsViewModel.text.observe(viewLifecycleOwner) {
         }

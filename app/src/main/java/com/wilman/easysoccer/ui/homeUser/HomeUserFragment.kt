@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.wilman.easysoccer.databinding.FragmentHomeUserBinding
+import com.wilman.easysoccer.ui.header.HeaderViewProfile
 
 class HomeUserFragment : Fragment() {
 
@@ -23,6 +24,7 @@ class HomeUserFragment : Fragment() {
 
         _binding = FragmentHomeUserBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        HeaderViewProfile(_binding!!.headerProfile, this).build()
         homeUserViewModel.text.observe(viewLifecycleOwner) {
         }
         return root
