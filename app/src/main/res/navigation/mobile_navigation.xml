@@ -7,15 +7,15 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.wilman.easysoccer.ui.home.HomeFragment"
+        android:name="com.wilman.easysoccer.ui.homeAdmin.HomeAdminFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home_admin" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.wilman.easysoccer.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_stadiums"
+        android:name="com.wilman.easysoccer.ui.stadiums.StadiumsFragment"
+        android:label="@string/title_stadiums"
+        tools:layout="@layout/fragment_stadiums" />
 
     <fragment
         android:id="@+id/navigation_notifications"

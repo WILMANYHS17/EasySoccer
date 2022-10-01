@@ -1,17 +1,16 @@
-package com.wilman.easysoccer.ui.dashboard
+package com.wilman.easysoccer.ui.stadiums
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.wilman.easysoccer.databinding.FragmentDashboardBinding
+import com.wilman.easysoccer.databinding.FragmentStadiumsBinding
 
-class DashboardFragment : Fragment() {
+class StadiumsFragment : Fragment() {
 
-    private var _binding: FragmentDashboardBinding? = null
+    private var _binding: FragmentStadiumsBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,15 +21,15 @@ class DashboardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val dashboardViewModel =
-            ViewModelProvider(this).get(DashboardViewModel::class.java)
+        val stadiumsViewModel =
+            ViewModelProvider(this)[StadiumsViewModel::class.java]
 
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+
+        _binding = FragmentStadiumsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+
+        stadiumsViewModel.text.observe(viewLifecycleOwner) {
         }
         return root
     }
