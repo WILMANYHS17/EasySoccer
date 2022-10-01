@@ -18,8 +18,8 @@
         tools:layout="@layout/fragment_stadiums" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.wilman.easysoccer.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_reserve_admin"
+        android:name="com.wilman.easysoccer.ui.reserve.ReserveAdminFragment"
+        android:label="@string/tittle_reserve_admin"
+        tools:layout="@layout/fragment_reserve_admin" />
 </navigation>

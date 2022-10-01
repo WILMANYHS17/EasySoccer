@@ -11,12 +11,9 @@
         android:title="Canchas" />
 
     <item
-        android:id="@+id/navigation_centroDeportivo"
+        android:id="@+id/navigation_reserve_admin"
         android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="Centro Deportivo" />
-
-    <item
-        android:id="@+id/navigation_reservasAdmin"
-        android:icon="@drawable/ic_dashboard_black_24dp"
         android:title="Reservas" />
+
+    
 </menu>
