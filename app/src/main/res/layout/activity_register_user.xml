@@ -8,26 +8,24 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="410dp"
-        android:layout_height="101dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="#702FF321"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/imageUser"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/txv_name_type_user"
-            android:layout_width="364dp"
-            android:layout_height="68dp"
-            android:layout_weight="100"
-            android:gravity="center"
-            android:rotationX="8"
-            tools:text="@string/register_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            tools:text="@string/register_admin"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />

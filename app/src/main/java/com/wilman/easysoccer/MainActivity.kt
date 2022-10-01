@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar!!.hide()
 
         binding.btnInitSession.setOnClickListener { onClickInitSession() }
         binding.btnRegisterUser.setOnClickListener { onClickRegisterUser() }

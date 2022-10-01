@@ -13,6 +13,7 @@ class RegisterUserActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar!!.hide()
         val typeUser = intent.extras!!.getString("user")
         if (typeUser == "Admin") {
             binding.txvNameTypeUser.text = getString(R.string.register_admin)
