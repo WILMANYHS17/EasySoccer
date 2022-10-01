@@ -9,11 +9,11 @@
     <fragment
         android:id="@+id/navigation_home_user"
         android:name="com.wilman.easysoccer.ui.homeUser.InYourAreaFragment"
-        android:label="fragment_in_your_area"
+        android:label="@string/fragment_in_your_area"
         tools:layout="@layout/fragment_in_your_area" />
     <fragment
         android:id="@+id/navigation_reserve_user"
         android:name="com.wilman.easysoccer.ui.reserveUser.ReserveUserFragment"
-        android:label="fragment_reserve_user"
+        android:label="@string/fragment_reserve_user"
         tools:layout="@layout/fragment_reserve_user" />
 </navigation>
