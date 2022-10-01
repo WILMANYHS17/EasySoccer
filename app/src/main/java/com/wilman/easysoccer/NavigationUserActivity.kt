@@ -17,6 +17,7 @@ class NavigationUserActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityNavigationUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar!!.hide()
 
         val navView: BottomNavigationView = binding.navViewUser
 
