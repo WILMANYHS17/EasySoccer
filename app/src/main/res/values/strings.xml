@@ -10,4 +10,7 @@
     <string name="password">Contraseña</string>
     <string name="user">Usuario</string>
     <string name="canchasalclick">Easy Soccer</string>
+    <string name="fragment_reserve_user">Reservas Realizadas</string>
+    <string name="fragment_in_your_area">Home Usuario</string>
+    <string name="identification">Identificacion</string>
 </resources>

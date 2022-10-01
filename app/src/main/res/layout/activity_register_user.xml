@@ -21,213 +21,233 @@
         app:layout_constraintVertical_bias="0.0">
 
         <TextView
-            android:id="@+id/registroUsuario"
+            android:id="@+id/txv_name_type_user"
             android:layout_width="364dp"
             android:layout_height="68dp"
             android:layout_weight="100"
             android:gravity="center"
             android:rotationX="8"
-            android:text="Registro Usuario"
+            tools:text="@string/register_user"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:text="Nombre"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.838" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="40dp"
-        android:text="Celular"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="40dp"
-        android:text="E-mail"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="44dp"
-        android:text="Usuario"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/textView10"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="32dp"
-        android:text="Contraseña"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="172dp"
-        android:text="Edad"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/nameUser"
-        android:layout_width="205dp"
-        android:layout_height="28dp"
-        android:layout_marginBottom="24dp"
-        android:background="#FFFFFF"
-
-        android:hint=""
-
-        app:layout_constraintBottom_toTopOf="@+id/celUser"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.657"
-        app:layout_constraintStart_toEndOf="@+id/textView6"
-        tools:visibility="visible" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/celUser"
-        android:layout_width="206dp"
-        android:layout_height="27dp"
-        android:layout_marginBottom="32dp"
-        android:background="#FFFFFF"
-        android:gravity="center"
-        android:hint=""
-        app:layout_constraintBottom_toTopOf="@+id/emailUser"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.675"
-        app:layout_constraintStart_toEndOf="@+id/textView7"
-        tools:ignore="MissingConstraints" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/emailUser"
-        android:layout_width="206dp"
-        android:layout_height="27dp"
-        android:layout_marginBottom="32dp"
-        android:background="#FFFFFF"
-        android:gravity="center"
-        android:hint=""
-        app:layout_constraintBottom_toTopOf="@+id/userUser"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.691"
-        app:layout_constraintStart_toEndOf="@+id/textView8" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/userUser"
-        android:layout_width="206dp"
-        android:layout_height="27dp"
-        android:layout_marginBottom="36dp"
-        android:background="#FFFFFF"
-        android:gravity="center"
-        android:hint=""
-        app:layout_constraintBottom_toTopOf="@+id/passwordUser"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.663"
-        app:layout_constraintStart_toEndOf="@+id/textView9" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/passwordUser"
-        android:layout_width="206dp"
-        android:layout_height="27dp"
-        android:layout_marginBottom="24dp"
-        android:background="#FFFFFF"
-        android:gravity="center"
-        android:hint=""
-        app:layout_constraintBottom_toTopOf="@+id/ageUser"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.561"
-        app:layout_constraintStart_toEndOf="@+id/textView10" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/ageUser"
-        android:layout_width="206dp"
-        android:layout_height="27dp"
-        android:layout_marginBottom="76dp"
-        android:background="#FFFFFF"
-        android:gravity="center"
-        android:hint=""
-        app:layout_constraintBottom_toTopOf="@+id/buttonRegisterUser"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.713"
-        app:layout_constraintStart_toEndOf="@+id/textView11" />
-
-    <Button
-        android:id="@+id/buttonRegisterUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginBottom="48dp"
-
-        android:text="Registrar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonCancelRegisterUser"
-        app:layout_constraintHorizontal_bias="0.462"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/buttonCancelRegisterUser"
-        android:layout_width="116dp"
-        android:layout_height="51dp"
-        android:layout_marginBottom="48dp"
-
-        android:text="Cancelar"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.83"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/buttonImageUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="56dp"
-        android:text="Imagen"
-        app:layout_constraintBottom_toTopOf="@+id/nameUser"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toEndOf="@+id/imageUser"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imageUser"
         android:layout_width="102dp"
         android:layout_height="96dp"
         android:layout_marginStart="64dp"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/nameUser"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btn_add_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Imagen"
+        app:layout_constraintBottom_toBottomOf="@+id/imageUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageUser"
+        app:layout_constraintTop_toTopOf="@+id/imageUser" />
+
+    <TextView
+        android:id="@+id/txv_name_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:layout_marginStart="@dimen/margin_xlarge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageUser" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_nameUser"
+        android:layout_width="205dp"
+        android:layout_height="27dp"
+        android:background="#FFFFFF"
+        android:hint=""
+        app:layout_constraintBottom_toBottomOf="@+id/txv_name_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toEndOf="@+id/txv_name_user"
+        app:layout_constraintTop_toTopOf="@+id/txv_name_user"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/txv_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Celular"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:layout_marginStart="@dimen/margin_xlarge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txv_name_user" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_phone_number"
+        android:layout_width="205dp"
+        android:layout_height="27dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:hint=""
+        app:layout_constraintBottom_toBottomOf="@+id/txv_phone_number"
+        app:layout_constraintEnd_toEndOf="@+id/edt_nameUser"
+        app:layout_constraintStart_toStartOf="@+id/edt_nameUser"
+        app:layout_constraintTop_toTopOf="@+id/txv_phone_number" />
+
+    <TextView
+        android:id="@+id/txv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E-mail"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:layout_marginStart="@dimen/margin_xlarge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txv_phone_number" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_email_user"
+        android:layout_width="205dp"
+        android:layout_height="27dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:hint=""
+        app:layout_constraintBottom_toBottomOf="@+id/txv_email"
+        app:layout_constraintEnd_toEndOf="@+id/edt_phone_number"
+        app:layout_constraintStart_toStartOf="@+id/edt_phone_number"
+        app:layout_constraintTop_toTopOf="@+id/txv_email" />
+
+    <TextView
+        android:id="@+id/txv_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usuario"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:layout_marginStart="@dimen/margin_xlarge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txv_email" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/userUser"
+        android:layout_width="205dp"
+        android:layout_height="27dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:hint=""
+        app:layout_constraintBottom_toBottomOf="@+id/txv_user"
+        app:layout_constraintEnd_toEndOf="@+id/edt_email_user"
+        app:layout_constraintStart_toStartOf="@+id/edt_email_user"
+        app:layout_constraintTop_toTopOf="@+id/txv_user" />
+
+    <TextView
+        android:id="@+id/txv_id_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/identification"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:layout_marginStart="@dimen/margin_xlarge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txv_user" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_id_admin"
+        android:layout_width="205dp"
+        android:layout_height="27dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:hint=""
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/txv_id_admin"
+        app:layout_constraintEnd_toEndOf="@+id/userUser"
+        app:layout_constraintStart_toStartOf="@+id/userUser"
+        app:layout_constraintTop_toTopOf="@+id/txv_id_admin" />
+
+    <TextView
+        android:id="@+id/txv_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_xlarge"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:text="Contraseña"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txv_id_admin" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_password_user"
+        android:layout_width="206dp"
+        android:layout_height="27dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:hint=""
+        app:layout_constraintBottom_toBottomOf="@+id/txv_password"
+        app:layout_constraintEnd_toEndOf="@+id/edt_id_admin"
+        app:layout_constraintStart_toStartOf="@+id/edt_id_admin"
+        app:layout_constraintTop_toTopOf="@+id/txv_password" />
+
+    <TextView
+        android:id="@+id/txv_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edad"
+        android:layout_marginStart="@dimen/margin_xlarge"
+        android:layout_marginTop="@dimen/margin_xlarge"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txv_password" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_age_user"
+        android:layout_width="206dp"
+        android:layout_height="27dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:hint=""
+        app:layout_constraintBottom_toBottomOf="@+id/txv_age"
+        app:layout_constraintEnd_toEndOf="@+id/edt_password_user"
+        app:layout_constraintStart_toStartOf="@+id/edt_password_user"
+        app:layout_constraintTop_toTopOf="@+id/txv_age" />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txv_age"
+        android:layout_marginTop="@dimen/margin_medium">
+
+        <Button
+            android:id="@+id/btn_register_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registrar"
+            android:layout_marginEnd="@dimen/margin_medium"/>
+
+        <Button
+            android:id="@+id/btn_cancel_register_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:layout_marginStart="@dimen/margin_medium"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

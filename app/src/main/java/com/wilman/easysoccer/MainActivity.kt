@@ -20,12 +20,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onClickRegisterAdmin() {
-        val intent = Intent(this, RegisterAdminActivity::class.java)
+        val intent = Intent(this, RegisterUserActivity::class.java)
+        intent.putExtra("user", "Admin")
         startActivity(intent)
     }
 
     private fun onClickRegisterUser() {
         val intent = Intent(this, RegisterUserActivity::class.java)
+        intent.putExtra("user", "User")
         startActivity(intent)
     }
 
