@@ -4,4 +4,10 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="register_admin">Registro de Administradores</string>
+    <string name="register_user">Registro de usuario</string>
+    <string name="init_sesion">Iniciar sesión</string>
+    <string name="password">Contraseña</string>
+    <string name="user">Usuario</string>
+    <string name="canchasalclick">Easy Soccer</string>
 </resources>

@@ -11,7 +11,7 @@
         android:id="@+id/textTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CanchasAlClick"
+        android:text="@string/canchasalclick"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -26,7 +26,7 @@
         android:id="@+id/textUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Usuario"
+        android:text="@string/user"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -55,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="Contraseña"
+        android:text="@string/password"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -79,10 +79,10 @@
         app:layout_constraintVertical_bias="0.103" />
 
     <Button
-        android:id="@+id/inicio"
+        android:id="@+id/btn_init_session"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Iniciar sesión"
+        android:text="@string/init_sesion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -91,24 +91,24 @@
         app:layout_constraintVertical_bias="0.204" />
 
     <Button
-        android:id="@+id/registerUser"
+        android:id="@+id/btn_register_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Registrarse"
+        android:text="@string/register_user"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inicio"
+        app:layout_constraintTop_toBottomOf="@+id/btn_init_session"
         app:layout_constraintVertical_bias="0.107" />
 
     <Button
-        android:id="@+id/registerAdmin"
+        android:id="@+id/btn_register_admin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Para Administradores"
+        android:text="@string/register_admin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerUser" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_register_user" />
 </androidx.constraintlayout.widget.ConstraintLayout>
