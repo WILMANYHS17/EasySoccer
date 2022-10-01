@@ -13,4 +13,6 @@
     <string name="fragment_reserve_user">Reservas Realizadas</string>
     <string name="fragment_in_your_area">Home Usuario</string>
     <string name="identification">Identificacion</string>
+    <string name="name_user">Nombre</string>
+    <string name="hello_name_user">Hola </string>
 </resources>

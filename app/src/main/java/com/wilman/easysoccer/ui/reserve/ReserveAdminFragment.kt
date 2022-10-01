@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.wilman.easysoccer.databinding.FragmentReserveAdminBinding
+import com.wilman.easysoccer.ui.header.HeaderViewProfile
 
 class ReserveAdminFragment : Fragment() {
 
@@ -26,7 +27,7 @@ class ReserveAdminFragment : Fragment() {
 
         _binding = FragmentReserveAdminBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
+        HeaderViewProfile(_binding!!.headerProfile, this).build()
 
         reserveAdminViewModel.text.observe(viewLifecycleOwner) {
 
