@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_admin">
 
 
+    <include
+        android:id="@+id/header_profile"
+        layout="@layout/header_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_profile">
 
         <TextView
             android:id="@+id/textCentroDeportivo"
@@ -17,8 +27,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:textColor="@color/white"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textColor="@color/white" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -32,24 +42,24 @@
             android:id="@+id/textView16"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
             android:layout_marginTop="20dp"
-            android:text="Descripción" />
+            android:text="Descripción"
+            android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/textDescripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
             android:layout_marginTop="20dp"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/buttonEditarCentro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="100dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="100dp"
             android:text="Editar" />
 
@@ -57,10 +67,10 @@
             android:id="@+id/textView24"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
             android:layout_marginTop="20dp"
-            android:text="Comentarios" />
+            android:text="Comentarios"
+            android:textColor="@color/white" />
 
 
     </LinearLayout>
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

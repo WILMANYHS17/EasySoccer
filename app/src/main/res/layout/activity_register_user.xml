@@ -25,10 +25,10 @@
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/margin_medium"
             android:layout_marginBottom="@dimen/margin_medium"
-            tools:text="@string/register_admin"
             android:textColor="@color/black"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:text="@string/register_admin" />
     </LinearLayout>
 
     <ImageView
@@ -55,7 +55,7 @@
         android:id="@+id/txv_name_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nombre"
+        android:text="@string/name_user"
         android:textColor="@color/white"
         android:layout_marginTop="@dimen/margin_xlarge"
         android:layout_marginStart="@dimen/margin_xlarge"

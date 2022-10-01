@@ -6,11 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.wilman.easysoccer.databinding.FragmentInYourAreaBinding
+import com.wilman.easysoccer.databinding.FragmentHomeUserBinding
 
-class InYourAreaFragment : Fragment() {
+class HomeUserFragment : Fragment() {
 
-   private var _binding: FragmentInYourAreaBinding?=null
+   private var _binding: FragmentHomeUserBinding?=null
     private val binding get() =_binding!!
 
 
@@ -19,11 +19,11 @@ class InYourAreaFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val inYourAreaViewModel = ViewModelProvider(this)[InYourAreaViewModel::class.java]
+        val homeUserViewModel = ViewModelProvider(this)[HomeUserViewModel::class.java]
 
-        _binding = FragmentInYourAreaBinding.inflate(inflater, container, false)
+        _binding = FragmentHomeUserBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        inYourAreaViewModel.text.observe(viewLifecycleOwner) {
+        homeUserViewModel.text.observe(viewLifecycleOwner) {
         }
         return root
     }

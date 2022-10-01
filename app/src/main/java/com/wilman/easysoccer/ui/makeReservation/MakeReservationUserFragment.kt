@@ -6,10 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.wilman.easysoccer.R
-import com.wilman.easysoccer.databinding.FragmentInYourAreaBinding
 import com.wilman.easysoccer.databinding.FragmentMakeReservationUserBinding
-import com.wilman.easysoccer.ui.homeUser.InYourAreaViewModel
 
 class MakeReservationUserFragment : Fragment() {
 

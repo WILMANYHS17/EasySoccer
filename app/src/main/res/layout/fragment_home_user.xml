@@ -5,17 +5,16 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/registros"
-    tools:context=".ui.reserveUser.ReserveUserFragment">
+    tools:context=".ui.homeUser.HomeUserFragment">
 
     <include
         android:id="@+id/header_profile"
         layout="@layout/header_profile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
@@ -23,11 +22,11 @@
         app:layout_constraintTop_toBottomOf="@+id/header_profile">
 
         <TextView
-            android:id="@+id/textView38"
+            android:id="@+id/textView39"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Reservas Realizadas"
+            android:text="Cerca Tuyo"
             android:textColor="@color/white" />
 
         <androidx.recyclerview.widget.RecyclerView
