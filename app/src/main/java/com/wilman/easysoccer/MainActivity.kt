@@ -31,8 +31,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun onClickInitSession() {
         if (binding.usuario.text?.isNotEmpty() == true && binding.contrasena.text?.isNotEmpty() == true) {
-            val intent = Intent(this, NavigatorAdminActivity::class.java)
-            startActivity(intent)
+            if(binding.usuario.text.toString() == "a"){
+                val intent = Intent(this, NavigationUserActivity::class.java)
+                startActivity(intent)
+            }else{
+                val intent = Intent(this, NavigatorAdminActivity::class.java)
+                startActivity(intent)
+            }
+
         } else {
             Toast.makeText(this, "Llene todos los campos", Toast.LENGTH_SHORT).show()
         }

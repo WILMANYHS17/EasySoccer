@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation_user"
+    app:startDestination="@id/navigation_home_user">
+
+
+    <fragment
+        android:id="@+id/navigation_home_user"
+        android:name="com.wilman.easysoccer.ui.homeUser.InYourAreaFragment"
+        android:label="fragment_in_your_area"
+        tools:layout="@layout/fragment_in_your_area" />
+    <fragment
+        android:id="@+id/navigation_reserve_user"
+        android:name="com.wilman.easysoccer.ui.reserveUser.ReserveUserFragment"
+        android:label="fragment_reserve_user"
+        tools:layout="@layout/fragment_reserve_user" />
+</navigation>
