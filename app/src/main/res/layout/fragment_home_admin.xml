@@ -34,7 +34,7 @@
             android:id="@+id/viewpager"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:background="@android:color/transparent"
+            android:background="@color/gray"
             android:paddingStart="80dp"
             android:paddingEnd="80dp"
             android:layout_marginTop="@dimen/margin_xxxsmall"

@@ -10,6 +10,7 @@ import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.wilman.easysoccer.databinding.FragmentHomeAdminBinding
+import com.wilman.easysoccer.models.Picture
 import com.wilman.easysoccer.ui.header.HeaderViewProfile
 import com.wilman.easysoccer.ui.viewpager.ImagesDetailAdapter
 import kotlin.math.abs
@@ -37,7 +38,15 @@ class HomeAdminFragment : Fragment() {
         _binding = FragmentHomeAdminBinding.inflate(inflater, container, false)
         val root: View = binding.root
         HeaderViewProfile(_binding!!.headerProfile, this).build()
-        viewPagerAdapter.setListImage(arrayListOf())
+        val imageResource = arrayListOf(
+            Picture(url = "screen1"),
+            Picture(url = "screen2"),
+            Picture(url = "screen3"),
+            Picture(url = "screen4"),
+            Picture(url = "screen5"),
+            Picture(url = "screen6"),
+        )
+        viewPagerAdapter.setListImage(imageResource)
         setUpAdapter()
 
         homeAdminViewModel.text.observe(viewLifecycleOwner) {

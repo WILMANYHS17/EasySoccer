@@ -39,7 +39,11 @@ class ImagesDetailAdapter(
 
         fun bind(picture: Picture, context: Context) {
             view.apply {
-                //imvImageProduct.set(context, picture.url)
+                val identifier =
+                    context.resources.getIdentifier(picture.url, "drawable", context.packageName)
+                if (identifier > 0) {
+                    imvImageProduct.setImageResource(identifier)
+                }
             }
         }
     }
