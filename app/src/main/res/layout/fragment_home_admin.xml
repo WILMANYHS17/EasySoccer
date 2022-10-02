@@ -30,13 +30,17 @@
             android:text="TextView"
             android:textColor="@color/white" />
 
-        <ImageView
-            android:id="@+id/imageView"
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager"
             android:layout_width="match_parent"
-            android:layout_height="136dp"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            tools:src="@tools:sample/backgrounds/scenic" />
+            android:layout_height="250dp"
+            android:background="@color/gray"
+            android:paddingStart="80dp"
+            android:paddingEnd="80dp"
+            android:layout_marginTop="@dimen/margin_xxxsmall"
+            app:layout_constraintTop_toBottomOf="@+id/txvProductName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
             android:id="@+id/textView16"
