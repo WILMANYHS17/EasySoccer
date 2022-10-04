@@ -11,5 +11,11 @@
     <dimen name="margin_xlarge">32dp</dimen>
     <dimen name="margin_xxlarge">48dp</dimen>
     <dimen name="margin_xxxlarge">64dp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
+    <dimen name="size_70dp">70dp</dimen>
+    <dimen name="size_100dp">100dp</dimen>
+    <dimen name="match_parent_0dp">0dp</dimen>
+    <dimen name="text_16sp">16sp</dimen>
+    <dimen name="size150dp">150dp</dimen>
 
 </resources>

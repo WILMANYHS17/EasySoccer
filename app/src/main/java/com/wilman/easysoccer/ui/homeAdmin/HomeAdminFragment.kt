@@ -47,6 +47,11 @@ class HomeAdminFragment : Fragment() {
             Picture(url = "screen6"),
         )
         viewPagerAdapter.setListImage(imageResource)
+
+        binding.txtDescription.text =
+            "Es un espacio de 3 canchas para fútbol 5 pero se puedo ajustar para una de fútbol" +
+                    " 8 con horario de 6:00 pm a 11:00 pm, incluye espacio de recreación y de comestibles "
+
         setUpAdapter()
 
         homeAdminViewModel.text.observe(viewLifecycleOwner) {
