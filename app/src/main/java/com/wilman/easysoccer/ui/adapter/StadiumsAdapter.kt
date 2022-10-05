@@ -7,9 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.wilman.easysoccer.databinding.ItemStadiumBinding
 import com.wilman.easysoccer.models.Stadium
 
-/**
- * Created by JHONATAN ROJAS on 9/10/2021.
- */
 class StadiumsAdapter(
     private val selectGoToDetail: (Stadium) -> Unit,
 ) : RecyclerView.Adapter<StadiumsAdapter.SearchProductViewHolder>() {

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lnlItemProduct"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_8dp"
+    android:layout_marginTop="@dimen/margin_8dp"
+    android:layout_marginEnd="@dimen/margin_8dp"
+    android:layout_marginBottom="@dimen/margin_8dp"
+    android:background="@drawable/box_of_text">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txv_title_stadium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Cancha 1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txv_title_reserve_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txv_title_stadium"
+        android:text="Reserva N° : " />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txv_reserve_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txv_title_reserve_number"
+        app:layout_constraintTop_toBottomOf="@+id/txv_title_stadium"
+        tools:text="1234567" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txv_title_reserve_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txv_reserve_number"
+        android:text="Reserva a Nombre de : " />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txv_reserve_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txv_title_reserve_name"
+        app:layout_constraintTop_toBottomOf="@+id/txv_reserve_number"
+        tools:text="Juan Perez" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txv_title_date_reserve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txv_reserve_name"
+        android:text="fecha : " />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txv_date_reserve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txv_title_date_reserve"
+        app:layout_constraintTop_toBottomOf="@+id/txv_reserve_name"
+        tools:text="30/10/2022 alas 8:00 pm" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txv_status_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_xsmall"
+        android:background="@android:color/holo_red_dark"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/margin_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txv_date_reserve"
+        tools:text="pago" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_price_reserve"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="$ 23333" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
