@@ -14,24 +14,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header_profile">
-
-        <TextView
-            android:id="@+id/textView39"
+            <TextView
+            android:id="@+id/txt_tittle_near_you"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Cerca Tuyo"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/header_profile"/>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_stadiums_near_you"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </LinearLayout>
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_tittle_near_you"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
