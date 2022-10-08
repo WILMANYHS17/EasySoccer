@@ -41,18 +41,18 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/txv_title_stadium"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ellipsize="end"
         android:maxLines="3"
         android:textSize="12dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/txt_value_stadium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.674"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/txv_title_direction_stadium"
+        app:layout_constraintEnd_toStartOf="@+id/txt_value_stadium"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/txt_value_stadium"
-        app:layout_constraintVertical_bias="0.6"
+        app:layout_constraintVertical_bias="0.0"
         tools:text="Invictus Fútbol 5" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -73,13 +73,24 @@
 
     <Button
         android:id="@+id/btn_map"
-        android:layout_width="151dp"
+        android:layout_width="80dp"
         android:layout_height="34dp"
         android:text="Ubicar"
         android:textSize="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/txv_title_direction_stadium"
+
         app:layout_constraintStart_toStartOf="@+id/txv_title_direction_stadium"
         app:layout_constraintTop_toBottomOf="@+id/txv_title_direction_stadium" />
+
+    <Button
+        android:id="@+id/btn_reserver_user"
+        android:layout_width="90dp"
+        android:layout_height="34dp"
+        android:text="Reservar"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_map"
+        app:layout_constraintEnd_toEndOf="@+id/txv_title_direction_stadium"
+        app:layout_constraintStart_toEndOf="@+id/btn_map"
+        app:layout_constraintTop_toTopOf="@+id/btn_map" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

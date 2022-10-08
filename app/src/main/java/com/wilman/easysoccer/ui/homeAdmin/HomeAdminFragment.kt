@@ -1,5 +1,6 @@
 package com.wilman.easysoccer.ui.homeAdmin
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
+import com.wilman.easysoccer.MapActivity
+import com.wilman.easysoccer.RegisterSportCenterActivity
+import com.wilman.easysoccer.RegisterUserActivity
 import com.wilman.easysoccer.databinding.FragmentHomeAdminBinding
 import com.wilman.easysoccer.models.Picture
 import com.wilman.easysoccer.ui.header.HeaderViewProfile
@@ -53,10 +57,20 @@ class HomeAdminFragment : Fragment() {
                     " 8 con horario de 6:00 pm a 11:00 pm, incluye espacio de recreación y de comestibles "
 
         setUpAdapter()
-
+        binding.btnEditSportCenter.setOnClickListener { goEditSportCenter() }
         homeAdminViewModel.text.observe(viewLifecycleOwner) {
         }
+
+
         return root
+    }
+
+    private fun goEditSportCenter() {
+
+        activity?.let {
+            val intent = Intent(this.activity, RegisterSportCenterActivity::class.java)
+            it.startActivity(intent)
+        }
     }
 
     override fun onDestroyView() {

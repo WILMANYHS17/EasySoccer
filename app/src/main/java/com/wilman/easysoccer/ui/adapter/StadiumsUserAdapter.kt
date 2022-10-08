@@ -1,17 +1,15 @@
 package com.wilman.easysoccer.ui.adapter
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.wilman.easysoccer.MapActivity
 import com.wilman.easysoccer.databinding.ItemsInYourAreaBinding
 import com.wilman.easysoccer.models.InYourArea
 
 class StadiumsUserAdapter(
     private val selectGoToDetail: (InYourArea) -> Unit,
+    private val selectGoToReserve: (InYourArea) -> Unit,
 ) : RecyclerView.Adapter<StadiumsUserAdapter.SearchProductViewHolder>() {
 
     private var stadiumsInYouArea: ArrayList<InYourArea> = arrayListOf()
@@ -42,7 +40,7 @@ class StadiumsUserAdapter(
     override fun onBindViewHolder(holder: SearchProductViewHolder, position: Int) {
         val product = stadiumsInYouArea[position]
         //holder.itemView.setOnClickListener { selectGoToDetail(product) }
-        holder.bind(product, holder.itemView.context, selectGoToDetail)
+        holder.bind(product, holder.itemView.context, selectGoToDetail, selectGoToReserve)
     }
 
     open class SearchProductViewHolder(
@@ -52,13 +50,15 @@ class StadiumsUserAdapter(
         fun bind(
             stadiumInYourArea: InYourArea,
             context: Context,
-            selectGoToDetail: (InYourArea) -> Unit
+            selectGoToDetail: (InYourArea) -> Unit,
+            selectGoToReserve: (InYourArea) -> Unit
         ) {
             view.apply {
                 txvTitleStadium.text = stadiumInYourArea.nameStadium
                 txtValueStadium.text = stadiumInYourArea.valueStadium
                 txvTitleDirectionStadium.text = stadiumInYourArea.directionStadium
                 btnMap.setOnClickListener { selectGoToDetail(stadiumInYourArea) }
+                btnReserverUser.setOnClickListener { selectGoToReserve(stadiumInYourArea) }
                 val identifier =
                     context.resources.getIdentifier(
                         stadiumInYourArea.image,
