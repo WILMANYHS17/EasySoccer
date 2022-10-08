@@ -24,7 +24,6 @@ class MakeUserReservationActivity : AppCompatActivity() {
 
             var intent = packageManager.getLaunchIntentForPackage("com.nequi.MobileApp")
             if (intent == null) {
-                // Bring user to the market or let them choose an app?
                 intent = Intent(Intent.ACTION_VIEW)
                 intent.data = Uri.parse("market://details?id=$packageName")
             }
@@ -48,9 +47,7 @@ class MakeUserReservationActivity : AppCompatActivity() {
     }
 
     fun onDateSelected(day: Int, month: Int, year: Int) {
-
         binding.editTxtDate.setText("$day / $month / $year")
-
     }
 
 }

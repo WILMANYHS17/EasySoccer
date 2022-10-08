@@ -133,7 +133,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txv_email" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/userUser"
+        android:id="@+id/edt_user_name"
         android:layout_width="205dp"
         android:layout_height="27dp"
         android:background="#FFFFFF"
@@ -165,8 +165,8 @@
         android:hint=""
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/txv_id_admin"
-        app:layout_constraintEnd_toEndOf="@+id/userUser"
-        app:layout_constraintStart_toStartOf="@+id/userUser"
+        app:layout_constraintEnd_toEndOf="@+id/edt_user_name"
+        app:layout_constraintStart_toStartOf="@+id/edt_user_name"
         app:layout_constraintTop_toTopOf="@+id/txv_id_admin" />
 
     <TextView
