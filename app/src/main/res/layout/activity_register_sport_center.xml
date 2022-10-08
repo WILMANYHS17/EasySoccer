@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/registros"
+    tools:context=".RegisterSportCenterActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:id="@+id/image_sport_center"
+                android:layout_width="102dp"
+                android:layout_height="96dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <Button
+                android:id="@+id/btn_image_sport_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Imagen"
+                app:layout_constraintEnd_toEndOf="@+id/image_sport_center"
+                app:layout_constraintHorizontal_bias="0.428"
+                app:layout_constraintStart_toStartOf="@+id/image_sport_center"
+                app:layout_constraintTop_toBottomOf="@+id/image_sport_center" />
+
+            <TextView
+                android:id="@+id/txt_tittle_name_sport_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_xlarge"
+                android:layout_marginTop="@dimen/margin_large"
+                android:text="Nombre"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_image_sport_center" />
+
+            <EditText
+                android:id="@+id/edit_txt_name_sport_center"
+                android:layout_width="200dp"
+                android:layout_height="27dp"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_tittle_name_sport_center"
+                app:layout_constraintEnd_toEndOf="@+id/btn_image_sport_center"
+                app:layout_constraintStart_toStartOf="@+id/btn_image_sport_center"
+                app:layout_constraintTop_toTopOf="@+id/txt_tittle_name_sport_center" />
+
+            <TextView
+                android:id="@+id/txt_tittle_direction_sport_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dirección"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/margin_large"
+                app:layout_constraintEnd_toEndOf="@+id/txt_tittle_name_sport_center"
+                app:layout_constraintStart_toStartOf="@+id/txt_tittle_name_sport_center"
+                app:layout_constraintTop_toBottomOf="@+id/txt_tittle_name_sport_center" />
+
+            <EditText
+                android:id="@+id/edit_txt_direction_sport_center"
+                android:layout_width="200dp"
+                android:layout_height="27dp"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_tittle_direction_sport_center"
+                app:layout_constraintEnd_toEndOf="@+id/edit_txt_name_sport_center"
+                app:layout_constraintStart_toStartOf="@+id/edit_txt_name_sport_center"
+                app:layout_constraintTop_toTopOf="@+id/txt_tittle_direction_sport_center" />
+
+            <TextView
+                android:id="@+id/txt_tittle_nit_sport_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NIT"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/margin_large"
+                app:layout_constraintEnd_toEndOf="@+id/txt_tittle_direction_sport_center"
+                app:layout_constraintStart_toStartOf="@+id/txt_tittle_direction_sport_center"
+                app:layout_constraintTop_toBottomOf="@+id/txt_tittle_direction_sport_center" />
+
+            <EditText
+                android:id="@+id/edit_txt_nit_sport_center"
+                android:layout_width="200dp"
+                android:layout_height="27dp"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_tittle_nit_sport_center"
+                app:layout_constraintEnd_toEndOf="@+id/edit_txt_direction_sport_center"
+                app:layout_constraintStart_toStartOf="@+id/edit_txt_direction_sport_center"
+                app:layout_constraintTop_toTopOf="@+id/txt_tittle_nit_sport_center" />
+
+            <TextView
+                android:id="@+id/txt_tittle_description_sport_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripción"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/margin_large"
+                app:layout_constraintEnd_toEndOf="@+id/txt_tittle_nit_sport_center"
+                app:layout_constraintStart_toStartOf="@+id/txt_tittle_nit_sport_center"
+                app:layout_constraintTop_toBottomOf="@+id/txt_tittle_nit_sport_center" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_nameUser"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:background="#FFFFFF"
+                android:hint=""
+                android:layout_marginTop="@dimen/margin_large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_tittle_description_sport_center">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+            <Button
+                android:id="@+id/btn_register_sport_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="@dimen/margin_large"
+                android:text="Guardar"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_nameUser"
+                app:layout_constraintVertical_bias="0.506" />
+
+            <Button
+                android:id="@+id/btn_cancel_register_sport_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancelar"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_register_sport_center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn_register_sport_center"
+                app:layout_constraintTop_toTopOf="@+id/btn_register_sport_center" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

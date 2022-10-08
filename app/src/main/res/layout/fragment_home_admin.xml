@@ -60,7 +60,7 @@
             android:textColor="@color/white" />
 
         <Button
-            android:id="@+id/buttonEditarCentro"
+            android:id="@+id/btn_edit_sport_center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
