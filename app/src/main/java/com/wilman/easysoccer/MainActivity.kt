@@ -1,13 +1,16 @@
 package com.wilman.easysoccer
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.firestore.FirebaseFirestore
 import com.wilman.easysoccer.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+
+    private val dataBase = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,14 +37,22 @@ class MainActivity : AppCompatActivity() {
 
     private fun onClickInitSession() {
         if (binding.usuario.text?.isNotEmpty() == true && binding.contrasena.text?.isNotEmpty() == true) {
-            if(binding.usuario.text.toString() == "a"){
-                val intent = Intent(this, NavigationUserActivity::class.java)
-                startActivity(intent)
-            }else{
-                val intent = Intent(this, NavigatorAdminActivity::class.java)
-                startActivity(intent)
+            val email = binding.usuario.text.toString()
+            val contrasena = binding.contrasena.text.toString()
+            dataBase.collection("users").document(email).get().addOnSuccessListener {
+                if (contrasena == it.get("password")) {
+                    if (it.get("isAdmin") as Boolean) {
+                        val intent = Intent(this, NavigatorAdminActivity::class.java)
+                        startActivity(intent)
+                    } else {
+                        val intent = Intent(this, NavigationUserActivity::class.java)
+                        startActivity(intent)
+                    }
+                } else {
+                    Toast.makeText(this, "Email o Contraseña incorrectos", Toast.LENGTH_SHORT)
+                        .show()
+                }
             }
-
         } else {
             Toast.makeText(this, "Llene todos los campos", Toast.LENGTH_SHORT).show()
         }
