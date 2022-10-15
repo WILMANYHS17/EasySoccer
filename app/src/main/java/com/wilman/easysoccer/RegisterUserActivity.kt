@@ -100,7 +100,6 @@ class RegisterUserActivity : AppCompatActivity() {
             binding.imageUser.setImageURI(data)
         }
 
-
     }
     fun loadImage(){
         val intent= Intent(Intent.ACTION_GET_CONTENT)
