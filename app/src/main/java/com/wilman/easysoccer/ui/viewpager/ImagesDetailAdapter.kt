@@ -10,7 +10,6 @@ import com.wilman.easysoccer.databinding.ItemImageProductBinding
 class ImagesDetailAdapter(
     private val selectImage: (position: Int) -> Unit
 ) : RecyclerView.Adapter<ImagesDetailAdapter.ImageViewHolder>() {
-
     private var imagesProducts: ArrayList<Picture> = arrayListOf()
 
     fun setListImage(picturesList: List<Picture>) {
@@ -36,7 +35,6 @@ class ImagesDetailAdapter(
 
     open class ImageViewHolder(private var view: ItemImageProductBinding) :
         RecyclerView.ViewHolder(view.root) {
-
         fun bind(picture: Picture, context: Context) {
             view.apply {
                 val identifier =

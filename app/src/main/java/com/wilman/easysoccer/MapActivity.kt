@@ -1,5 +1,4 @@
 package com.wilman.easysoccer
-
 import android.Manifest
 import android.content.pm.PackageManager
 import android.opengl.GLES30
@@ -19,14 +18,9 @@ import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.gms.maps.model.PolygonOptions
 import com.google.android.gms.maps.model.PolylineOptions
 import com.wilman.easysoccer.databinding.ActivityMapBinding
-
-
 class MapActivity : AppCompatActivity(), OnMapReadyCallback {
-
-
     private lateinit var binding: ActivityMapBinding
     private lateinit var map: GoogleMap
-
     companion object {
         const val REQUEST_CODE_LOCATION = 0
     }
@@ -44,8 +38,6 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
         val mapFragment: SupportMapFragment =
             supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
-
-
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
@@ -53,8 +45,6 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
         createMarker()
         enableLocation()
     }
-
-
 
     fun createMarker() {
 
@@ -66,7 +56,6 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
             4000,
             null
         )
-
     }
 
     fun isLocationPermission() =
@@ -84,9 +73,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
 
         } else {
             requestLocationPermission()
-        }
-
-
+       }
     }
 
     fun requestLocationPermission() {
@@ -102,10 +89,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
                 arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
                 REQUEST_CODE_LOCATION
             )
-
         }
-
-
     }
 
     override fun onRequestPermissionsResult(
@@ -124,7 +108,6 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
                 ).show()
             }
             else -> {}
-
         }
     }
 

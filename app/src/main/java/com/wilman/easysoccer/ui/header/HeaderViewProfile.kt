@@ -15,13 +15,14 @@ class HeaderViewProfile(val binding: HeaderProfileBinding, val fragment: Fragmen
             fragment.requireActivity().onBackPressed()
         }
         binding.txvUserName.text =
-            "${fragment.getString(R.string.hello_name_user)} Jhonatan Alexander Rojas Suesca"
+            "${fragment.getString(R.string.hello_name_user)} Wilman Yecid Hernández Suesca"
 
         binding.imvUser.setOnClickListener {
             val intent = Intent(fragment.activity, RegisterUserActivity::class.java)
             intent.putExtra("user", "User")
             startActivity(fragment.context!!, intent, null)
         }
+
 
     }
 }

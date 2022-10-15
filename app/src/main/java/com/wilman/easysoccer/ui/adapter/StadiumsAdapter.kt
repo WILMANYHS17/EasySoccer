@@ -10,7 +10,6 @@ import com.wilman.easysoccer.models.Stadium
 class StadiumsAdapter(
     private val selectGoToDetail: (Stadium) -> Unit,
 ) : RecyclerView.Adapter<StadiumsAdapter.SearchProductViewHolder>() {
-
     private var stadiums: ArrayList<Stadium> = arrayListOf()
 
     fun setList(listStadiums: List<Stadium>) {
@@ -45,7 +44,6 @@ class StadiumsAdapter(
     open class SearchProductViewHolder(
         private var view: ItemStadiumBinding
     ) : RecyclerView.ViewHolder(view.root) {
-
         fun bind(stadium: Stadium, context: Context) {
             view.apply {
                 txvNumberStadium.text = stadium.numberStadium

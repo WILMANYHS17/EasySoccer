@@ -35,7 +35,6 @@ class HomeUserFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val homeUserViewModel = ViewModelProvider(this)[HomeUserViewModel::class.java]
-
         _binding = FragmentHomeUserBinding.inflate(inflater, container, false)
         val root: View = binding.root
         HeaderViewProfile(_binding!!.headerProfile, this).build()
@@ -44,9 +43,9 @@ class HomeUserFragment : Fragment() {
         setUpAdapter()
         stadiumAdapterNearYou.setListInYouArea(getListStadiumsNearYou())
         homeUserViewModel.text.observe(viewLifecycleOwner) {
-
         }
         return root
+
     }
     private fun getListStadiumsNearYou(): List<InYourArea> {
         return arrayListOf(
@@ -64,7 +63,6 @@ class HomeUserFragment : Fragment() {
                 valueStadium = "100000",
                 nameStadium = "CANCHAS SINTETICAS TERRA SOCCER"
             ),
-
             )
     }
 
@@ -80,7 +78,6 @@ class HomeUserFragment : Fragment() {
             val intent = Intent(this.activity, MapActivity::class.java)
             it.startActivity(intent)
         }
-
     }
 
     private fun goToReserveStadium(inYouArea: InYourArea) {
@@ -88,11 +85,9 @@ class HomeUserFragment : Fragment() {
             val intent = Intent(this.activity, MakeUserReservationActivity::class.java)
             it.startActivity(intent)
         }
-
     }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
 }

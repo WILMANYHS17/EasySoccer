@@ -28,7 +28,6 @@ class HomeAdminFragment : Fragment() {
             ::showImageZoom
         )
     }
-
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -38,7 +37,6 @@ class HomeAdminFragment : Fragment() {
     ): View {
         val homeAdminViewModel =
             ViewModelProvider(this)[HomeAdminViewModel::class.java]
-
         _binding = FragmentHomeAdminBinding.inflate(inflater, container, false)
         val root: View = binding.root
         HeaderViewProfile(_binding!!.headerProfile, this).build()
@@ -51,22 +49,17 @@ class HomeAdminFragment : Fragment() {
             Picture(url = "screen6"),
         )
         viewPagerAdapter.setListImage(imageResource)
-
         binding.txtDescription.text =
             "Es un espacio de 3 canchas para fútbol 5 pero se puedo ajustar para una de fútbol" +
                     " 8 con horario de 6:00 pm a 11:00 pm, incluye espacio de recreación y de comestibles "
-
         setUpAdapter()
         binding.btnEditSportCenter.setOnClickListener { goEditSportCenter() }
         homeAdminViewModel.text.observe(viewLifecycleOwner) {
         }
-
-
         return root
     }
 
     private fun goEditSportCenter() {
-
         activity?.let {
             val intent = Intent(this.activity, RegisterSportCenterActivity::class.java)
             it.startActivity(intent)
@@ -84,7 +77,6 @@ class HomeAdminFragment : Fragment() {
             clipChildren = false
             offscreenPageLimit = 3
             adapter = viewPagerAdapter
-
             val compositePageTransformer = CompositePageTransformer()
             val pageTransformer = ViewPager2.PageTransformer { page, position ->
                 var r = 1 - abs(position)
