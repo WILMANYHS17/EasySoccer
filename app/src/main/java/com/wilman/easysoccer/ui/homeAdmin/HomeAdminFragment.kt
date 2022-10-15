@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
+import com.google.firebase.firestore.FirebaseFirestore
 import com.wilman.easysoccer.MapActivity
 import com.wilman.easysoccer.RegisterSportCenterActivity
 import com.wilman.easysoccer.RegisterUserActivity
@@ -22,6 +23,7 @@ import kotlin.math.abs
 class HomeAdminFragment : Fragment() {
 
     private var _binding: FragmentHomeAdminBinding? = null
+    private val database = FirebaseFirestore.getInstance()
 
     private val viewPagerAdapter by lazy {
         ImagesDetailAdapter(
@@ -49,14 +51,22 @@ class HomeAdminFragment : Fragment() {
             Picture(url = "screen6"),
         )
         viewPagerAdapter.setListImage(imageResource)
-        binding.txtDescription.text =
-            "Es un espacio de 3 canchas para fútbol 5 pero se puedo ajustar para una de fútbol" +
-                    " 8 con horario de 6:00 pm a 11:00 pm, incluye espacio de recreación y de comestibles "
         setUpAdapter()
+        getRegisterSportCenter()
         binding.btnEditSportCenter.setOnClickListener { goEditSportCenter() }
         homeAdminViewModel.text.observe(viewLifecycleOwner) {
         }
         return root
+    }
+
+    fun getRegisterSportCenter(){
+
+        database.collection("users").document("whernandezsuesca@gmail.com")
+            .collection("sportCenter").document("1234ths").get().addOnSuccessListener {
+                binding.txtDescription.text = (it.get("description") as String?)
+                binding.txtTittleSportCenter.text = (it.get("nameCenter") as String?)
+
+            }
     }
 
     private fun goEditSportCenter() {

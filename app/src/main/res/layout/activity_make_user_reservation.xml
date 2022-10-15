@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/registros"
+    android:background="@drawable/fondo4"
     tools:context=".MakeUserReservationActivity">
 
     <include
@@ -21,7 +21,7 @@
         android:layout_marginStart="@dimen/margin_large"
         android:layout_marginTop="@dimen/margin_large"
         android:text="Centro Deportivo"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header_profile" />
@@ -31,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Invitus fútbol 5"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/txt_name_sport_center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txt_name_sport_center"
@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_large"
         android:text="Ubicación"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/txt_name_sport_center"
         app:layout_constraintStart_toStartOf="@+id/txt_name_sport_center"
         app:layout_constraintTop_toBottomOf="@+id/txt_name_sport_center" />
@@ -53,7 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cl. 15 # 5 - 90, Tunja, Boyacá"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/txt_direction_sport_center"
         app:layout_constraintEnd_toEndOf="@+id/txt_name_sport_center_real"
         app:layout_constraintStart_toStartOf="@+id/txt_name_sport_center_real"
@@ -65,7 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Confirmando reserva"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="@dimen/margin_large"
 
         app:layout_constraintEnd_toEndOf="@+id/txt_direction_sport_center_real"
@@ -80,15 +80,15 @@
         android:layout_marginStart="@dimen/margin_large"
         android:layout_marginTop="@dimen/margin_large"
         android:text="Número de jugadores"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_confirmation_reserver" />
 
 
     <EditText
         android:id="@+id/edit_txt_number_players"
-        android:layout_width="50dp"
-        android:layout_height="20dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:hint="5 u 8"
         app:layout_constraintBottom_toBottomOf="@+id/txt_number_players"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,7 +101,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_large"
         android:text="Fecha"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/txt_number_players"
         app:layout_constraintStart_toStartOf="@+id/txt_number_players"
         app:layout_constraintTop_toBottomOf="@+id/txt_number_players" />
@@ -113,7 +113,7 @@
         android:clickable="false"
         android:focusable="false"
         android:hint="Selecciona el día"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/txt_date"
         app:layout_constraintEnd_toEndOf="@+id/edit_txt_number_players"
         app:layout_constraintStart_toStartOf="@+id/edit_txt_number_players"
@@ -125,7 +125,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_large"
         android:text="Hora"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/txt_date"
         app:layout_constraintStart_toStartOf="@+id/txt_date"
         app:layout_constraintTop_toBottomOf="@+id/txt_date" />
@@ -137,7 +137,7 @@
         android:clickable="false"
         android:focusable="false"
         android:hint="Selecciona la hora"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/txt_time"
         app:layout_constraintEnd_toEndOf="@+id/edit_txt_date"
         app:layout_constraintStart_toStartOf="@+id/edit_txt_date"
@@ -149,7 +149,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_large"
         android:text="Precio de la reserva"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/txt_time"
         app:layout_constraintStart_toStartOf="@+id/txt_time"
         app:layout_constraintTop_toBottomOf="@+id/txt_time" />
@@ -159,7 +159,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="90000"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
 
         app:layout_constraintBottom_toBottomOf="@+id/txt_value_reservation"
         app:layout_constraintEnd_toEndOf="@+id/edit_txt_time"
@@ -172,19 +172,41 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_large"
         android:text="Pagar ahora (mínimo)"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/txt_value_reservation"
         app:layout_constraintStart_toStartOf="@+id/txt_value_reservation"
         app:layout_constraintTop_toBottomOf="@+id/txt_value_reservation" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="180dp"
+        android:layout_height="38dp"
+        android:text="Para pagar por Nequi, use el siguiente número"
+        android:layout_marginTop="@dimen/margin_large"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/txt_value_reservation_now"
+        app:layout_constraintStart_toStartOf="@+id/txt_value_reservation_now"
+        app:layout_constraintTop_toBottomOf="@+id/txt_value_reservation_now" />
 
     <TextView
-        android:id="@+id/txt_value_reservation_now_stadium"
+        android:id="@+id/txt_numberPay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="10000"
-        android:textColor="@color/white"
+        android:text="3133992230"
+        android:layout_marginTop="@dimen/margin_large"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@+id/edit_txt_value_reservation_now_stadium"
+        app:layout_constraintStart_toStartOf="@+id/edit_txt_value_reservation_now_stadium"
+        app:layout_constraintTop_toBottomOf="@+id/txt_value_reservation_now" />
 
+    <EditText
+        android:id="@+id/edit_txt_value_reservation_now_stadium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="10000"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/margin_large"
         app:layout_constraintBottom_toBottomOf="@+id/txt_value_reservation_now"
         app:layout_constraintEnd_toEndOf="@+id/txt_value_reservation_stadium"
         app:layout_constraintStart_toStartOf="@+id/txt_value_reservation_stadium"
@@ -194,12 +216,12 @@
         android:id="@+id/txt_time_for_cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_large"
         android:text="Se puede cancelar hasta 10 horas antes"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/margin_large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_value_reservation_now" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_numberPay" />
 
     <Button
         android:id="@+id/btn_pay_reservation"

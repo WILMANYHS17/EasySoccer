@@ -194,12 +194,13 @@
 
     <TextView
         android:id="@+id/txv_age"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Edad"
+        android:layout_width="93dp"
+        android:layout_height="39dp"
         android:layout_marginStart="@dimen/margin_xlarge"
         android:layout_marginTop="@dimen/margin_xlarge"
+        android:text="Fecha de nacimiento"
         android:textColor="@color/white"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txv_password" />
 

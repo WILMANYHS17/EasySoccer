@@ -10,17 +10,51 @@ import android.provider.MediaStore
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
+import com.google.firebase.firestore.FirebaseFirestore
 import com.wilman.easysoccer.databinding.ActivityRegisterSportCenterBinding
 import com.wilman.easysoccer.databinding.ActivityRegisterUserBinding
 
 class RegisterSportCenterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterSportCenterBinding
+    private val database = FirebaseFirestore.getInstance()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterSportCenterBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        getDataSportCenter()
         binding.btnImageSportCenter.setOnClickListener { permmissionImage() }
+        binding.btnRegisterSportCenter.setOnClickListener { registerSportCenter() }
 
+    }
+
+    fun registerSportCenter(){
+        val nameCenter = binding.editTxtNameSportCenter.text
+        val nit = binding.editTxtNitSportCenter.text
+        val address = binding.editTxtDirectionSportCenter.text
+        val description = binding.edtDescriptionCenter.text
+        database.collection("users").document("whernandezsuesca@gmail.com")
+            .collection("sportCenter").document(nit.toString()).set(
+                hashMapOf(
+                    "nameCenter" to nameCenter.toString(),
+                    "nit" to nit.toString(),
+                    "address" to address.toString(),
+                    "description" to description.toString()
+                )
+
+            )
+        onBackPressed()
+    }
+
+    fun getDataSportCenter(){
+
+        database.collection("users").document("whernandezsuesca@gmail.com")
+            .collection("sportCenter").document("1234ths").get().addOnSuccessListener {
+                binding.editTxtNameSportCenter.setText(it.get("nameCenter") as String?)
+                binding.editTxtNitSportCenter.setText(it.get("nit") as String)
+                binding.edtDescriptionCenter.setText(it.get("description") as String?)
+                binding.editTxtDirectionSportCenter.setText(it.get("address") as String?)
+
+            }
     }
 
     fun permmissionImage(){
