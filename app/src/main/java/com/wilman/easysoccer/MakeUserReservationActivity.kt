@@ -7,17 +7,13 @@ import androidx.appcompat.app.AppCompatActivity
 import com.wilman.easysoccer.databinding.ActivityMakeUserReservationBinding
 import com.wilman.easysoccer.ui.calendarUser.DatePickerFragment
 import com.wilman.easysoccer.ui.calendarUser.TimePickerFragment
-
-
 class MakeUserReservationActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMakeUserReservationBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityMakeUserReservationBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         binding.editTxtDate.setOnClickListener { showDatePickerDialog() }
         binding.editTxtTime.setOnClickListener { showTimePickerDialog() }
         binding.btnPayReservation.setOnClickListener {

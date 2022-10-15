@@ -14,13 +14,8 @@ import com.wilman.easysoccer.ui.adapter.ReservesAdminAdapter
 import com.wilman.easysoccer.ui.header.HeaderViewProfile
 
 class ReserveAdminFragment : Fragment() {
-
     private var _binding: FragmentReserveAdminBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
-
     private val reserveAdminAdapter by lazy {
         ReservesAdminAdapter(
             ::goToDetailProduct,
@@ -34,15 +29,12 @@ class ReserveAdminFragment : Fragment() {
     ): View {
         val reserveAdminViewModel =
             ViewModelProvider(this)[ReserveAdminViewModel::class.java]
-
         _binding = FragmentReserveAdminBinding.inflate(inflater, container, false)
         val root: View = binding.root
         HeaderViewProfile(_binding!!.headerProfile, this).build()
-
         setUpAdapter()
         reserveAdminAdapter.setList(getListStadiums())
         reserveAdminViewModel.text.observe(viewLifecycleOwner) {
-
         }
         return root
     }
@@ -65,8 +57,6 @@ class ReserveAdminFragment : Fragment() {
                 statusPayment = "Esperando pago",
                 valueReserve = "70000"
             ),
-
-
             )
     }
 
@@ -78,7 +68,6 @@ class ReserveAdminFragment : Fragment() {
     }
 
     private fun goToDetailProduct(reserve: Reserve) {
-
     }
 
     override fun onDestroyView() {

@@ -11,7 +11,6 @@ class StadiumsUserAdapter(
     private val selectGoToDetail: (InYourArea) -> Unit,
     private val selectGoToReserve: (InYourArea) -> Unit,
 ) : RecyclerView.Adapter<StadiumsUserAdapter.SearchProductViewHolder>() {
-
     private var stadiumsInYouArea: ArrayList<InYourArea> = arrayListOf()
 
     fun setListInYouArea(listStadiumsInYourArea: List<InYourArea>) {
@@ -46,7 +45,6 @@ class StadiumsUserAdapter(
     open class SearchProductViewHolder(
         private var view: ItemsInYourAreaBinding
     ) : RecyclerView.ViewHolder(view.root) {
-
         fun bind(
             stadiumInYourArea: InYourArea,
             context: Context,
@@ -71,15 +69,11 @@ class StadiumsUserAdapter(
                 lnlItemInYourArea.elevation = ELEVATION_CARD
             }
         }
-
-
     }
 
     companion object {
         private var ELEVATION_CARD = 4F
     }
-
-
 }
 
 

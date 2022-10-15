@@ -34,7 +34,6 @@ class StadiumsFragment : Fragment() {
         _binding = FragmentStadiumsBinding.inflate(inflater, container, false)
         val root: View = binding.root
         HeaderViewProfile(_binding!!.headerProfile, this).build()
-
         setUpAdapter()
         stadiumAdapter.setList(getListStadiums())
         stadiumsViewModel.text.observe(viewLifecycleOwner) {
@@ -74,7 +73,6 @@ class StadiumsFragment : Fragment() {
                 numberStadium = "5",
                 status = "ocupado"
             ),
-
             )
     }
 
@@ -86,7 +84,6 @@ class StadiumsFragment : Fragment() {
     }
 
     private fun goToDetailProduct(stadium: Stadium) {
-
     }
 
     override fun onDestroyView() {

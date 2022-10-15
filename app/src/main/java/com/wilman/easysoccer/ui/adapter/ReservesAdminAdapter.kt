@@ -10,9 +10,7 @@ import com.wilman.easysoccer.models.Reserve
 class ReservesAdminAdapter(
     private val selectGoToDetail: (Reserve) -> Unit,
 ) : RecyclerView.Adapter<ReservesAdminAdapter.ReserveAdminViewHolder>() {
-
     private var reserve: ArrayList<Reserve> = arrayListOf()
-
     fun setList(listReserve: List<Reserve>) {
         clearAdapter()
         reserve.addAll(listReserve)
@@ -45,7 +43,6 @@ class ReservesAdminAdapter(
     open class ReserveAdminViewHolder(
         private var view: ItemReservsBinding
     ) : RecyclerView.ViewHolder(view.root) {
-
         fun bind(reserve: Reserve, context: Context) {
             view.apply {
                 txvTitleStadium.text = reserve.nameStadium
